@@ -8,7 +8,7 @@
 // DEBUG ----->
 std::string filepath("output.txt");
 std::ofstream outfile;
-outfile.open(filepath);
+outfile.open(filepath, std::fstream::app);
 outfile << "*****" << std::endl;
 outfile << base::debug::StackTrace().ToString();
 outfile.close();
