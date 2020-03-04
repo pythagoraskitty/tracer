@@ -1,3 +1,4 @@
+def GetNextObjMethodSeparator(stacktrace, position):
   paren = stacktrace.find("()", position + 1)
   if paren == -1:
     return -1
@@ -95,10 +96,10 @@ class TrieNode:
 
   def Print(self):
     if self.parent != None:
-      print(self.parent.name, end = "")
+      print("(", self.parent.name, ")", end = "")
     else:
-      print("\t", end = "")
-    print("::", self.name, self.count, "-<", end = "")
+      print("(\t)", end = "")
+    print("..", self.name, self.count, "-<", end = "")
     if len(self.children) == 0:
       print(">")
       return
