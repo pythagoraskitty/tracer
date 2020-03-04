@@ -6,7 +6,7 @@
 
 
 // DEBUG ----->
-std::string filepath("output.txt");
+std::string filepath("trace/output.txt");
 std::ofstream outfile;
 outfile.open(filepath, std::fstream::app);
 outfile << "*****" << std::endl;
